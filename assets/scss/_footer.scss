@@ -1,0 +1,186 @@
+.footer {
+  background: rgba(37, 170, 225, 0.3);
+  position: relative;
+  padding-top: 60px;
+  overflow: hidden;
+  .float-icon-5 {
+    top: 60px;
+    filter: invert(51%) sepia(79%) saturate(3118%) hue-rotate(313deg) brightness(103%) contrast(99%);
+  }
+  .blog-float-img3 {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+    width: 150px;
+    object-fit: contain;
+    animation: leftRightAnimation 1s linear infinite alternate-reverse;
+    z-index: 3;
+  }
+  .float-icon-4 {
+    position: absolute;
+    bottom: 100px;
+    left: -20px;
+    height: 50px;
+    object-fit: contain;
+    rotate: 80deg;
+    animation: leftRightTranslateAnimation 1s linear infinite alternate-reverse;
+    filter: invert(51%) sepia(79%) saturate(3118%) hue-rotate(313deg) brightness(103%) contrast(99%);
+    opacity: 0.8;
+  }
+  &::before {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: url("../images/demo-img-13.svg") no-repeat center;
+    background-size: cover;
+    content: "";
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.8;
+  }
+  &::after {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: scaleY(-1);
+    background: url("../images/cloud-bg.png") repeat-x center top;
+    background-size: contain;
+    content: "";
+    pointer-events: none;
+    z-index: 2;
+  }
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+  .footer-top-container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #818181;
+    @media (max-width: 991px) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  .footer-logo-link {
+    height: 64px;
+    width: fit-content;
+    max-width: 250px;
+    display: flex;
+    margin-bottom: 20px;
+    .footer-logo-img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .footer-title {
+    font-size: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: $primaryFontColor;
+    span {
+      color: $secondary;
+    }
+    @media (max-width: 576px) {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  .footer-link-ul {
+    padding: 0;
+    margin: 0;
+    .footer-link-li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 15px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .footer-link {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 600;
+        color: $primaryFontColor;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        transition: 0.3s ease;
+        i {
+          line-height: 0;
+        }
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+  .footer-contact-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $primaryFontColor;
+    transition: 0.3s ease;
+    margin-bottom: 15px;
+    i {
+      line-height: 0;
+    }
+  }
+  a.footer-contact-div {
+    &:hover {
+      color: $secondary;
+    }
+  }
+  .footer-bottom-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .copyright-text {
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+      color: $primaryFontColor;
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+    }
+    .payment-icon-div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px;
+      @media (max-width: 991px) {
+        justify-content: center;
+      }
+      .payment-icon {
+        width: 60px;
+        height: 30px;
+        background: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 0px 20px rgba(33, 37, 41, 0.1);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
